@@ -1,2 +1,2 @@
 # Web Development
- Complete-web-development
+ Complete-web-development-course
