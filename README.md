@@ -1,2 +1,2 @@
 # Web Development
- Complete-web-development-bootcamp
+ Complete-web-development
