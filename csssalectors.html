@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS salectors</title>
+    <style>
+        /* Element Salector */
+        p {
+            border: 2px solid red;
+        }
+
+        /* Id Salector */
+        #firstpara {
+            color: green;
+        }
+
+        /* Class Salector */
+        .bgblue {
+            color: yellow;
+            background: blue;
+        }
+
+        /* Grouping Salector */
+        footer,
+        span {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>CSS Salectors</h3>
+    <p id="firstpara">This is a simple paragraph to demonstrate CSS salectors</p>
+    <p id="secondpara" class="redelement bgblue">This is another paragraph to demonstrate CSS salectors</p>
+    <div>
+        <p>This is yet paragraph in div to demonstrate CSS salectors</p>
+        <span>This is span</span>
+    </div>
+    <footer>This is footer</footer>
+</body>
+
+</html>
