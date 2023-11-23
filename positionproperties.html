@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Position Properties</title>
     <style>
-        .container{
+        .container {
             border: 2px solid black;
             background-color: khaki;
             height: 1455px;
         }
+
         /* CSS Postion: static(default), relative, absolute, fixed, sticky */
-        .box{
+        .box {
             border: 2px solid red;
             width: 150px;
             height: 150px;
             margin: 2px;
             display: inline-block;
         }
-        #box3{
+
+        #box3 {
             /* relative positions the elemnt relative to its normal position and will leave a gap at its normal position-
             position: relative;
             
@@ -35,9 +38,10 @@
             /* stickey stick to window screen */
             position: sticky;
             top: 3px;
-        }  
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="box" id="box1"></div>
@@ -46,4 +50,5 @@
         <div class="box" id="box4"></div>
     </div>
 </body>
+
 </html>
