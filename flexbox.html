@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            height: 544px;
+            width: 100%;
+            border: 2px solid black;
+            /* Initialize the container as FlexBox: */
+            display: flex;
+
+            /* Properties for Flex container (default row*/
+            /* flex-direction: row; */
+            /* flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse; */
+            /* flex-wrap: wrap;
+            flex-wrap: wrap-reverse; */
+            /* flex-flow: row wrap; */
+
+            /* justify-content: center;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: space-around; */
+
+            /* align-items: center;
+            align-items: flex-end;
+            align-items: flex-start;
+            align-items: stretch; */
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 10px;
+            padding: 3px;
+        }
+
+        #item-1 {
+            /* Flex properties for a flex item */
+            /* higher the order later it shows up in the container */
+            /* order: 2; */
+            /* flex-grow: 2; */
+        }
+
+        #item-2 {
+            /* flex-grow: 3;
+            flex-shrink: 2; */
+
+            flex-basis: 160px;
+            /* 
+            ---> when flex-direction is set to row flex-basis will control width.
+            ---> when flex-direction is set to column flex-basis will control height. 
+            */
+        }
+
+        #item-3 {
+            /* flex: 2 2 130px; */
+            /* align-self: flex-end;
+            align-self: center; */
+            align-self: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is Flexbox</h1>
+    <div class="container">
+        <div class="item" id="item-1">First Box</div>
+        <div class="item" id="item-2">Second Box</div>
+        <div class="item" id="item-3">Third Box</div>
+        <div class="item" id="item-4">Fourth Box</div>
+        <div class="item" id="item-5">fifth Box</div>
+        <div class="item" id="item-6">Sixth Box</div>
+    </div>
+</body>
+
+</html>
