@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid Row & Gaps</title>
     <style>
-        .grid{
+        .grid {
             display: grid;
             grid-template-rows: 1fr 1fr 4fr;
             grid-auto-rows: 2fr;
             grid-template-columns: repeat(4, 2fr);
             grid-gap: 1rem;
         }
-        .box{
+
+        .box {
             background-color: red;
             border: 2px solid black;
         }
     </style>
 </head>
+
 <body>
     <div class="grid">
         <div class="box">This is box-1</div>
@@ -32,4 +35,5 @@
         <div class="box">This is box-10</div>
     </div>
 </body>
+
 </html>
