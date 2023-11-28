@@ -1,14 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid + Media Quereis</title>
     <style>
-        
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer'
+            ;
+        }
+
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: red;
+            }
+
+            .container {
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer'
+                ;
+            }
+
+            aside {
+                display: none;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width: 300px) and (max-width:500px) {
+            body {
+                background-color: blue;
+            }
+
+            .container {
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer'
+                ;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 500px) and (max-width:800px) {
+            body {
+                background-color: yellow;
+            }
+
+            .container {
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer'
+                ;
+            }
+        }
+
+        @media (min-width: 800px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        .bdr {
+            border: 2px solid black;
+            padding: 10px 23px;
+            background-color: wheat;
+        }
+
+        nav {
+            grid-area: navbar;
+            text-align: center;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </nav>
+        <section class="bdr">
+            <h2>CSS HTML</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem, voluptatibus minus rem
+                repudiandae vero similique veniam adipisci laborum consequatur ipsam. Quasi voluptatibus labore aperiam
+                dignissimos vel laborum magnam ab accusamus, aut, maiores eaque delectus odit in vitae accusantium sunt
+                ut. Consequatur cumque laudantium dolorum cupiditate eaque aliquam laboriosam, ut praesentium quaerat,
+                incidunt nobis laborum consequuntur culpa aut sed minima. Praesentium numquam eum, dignissimos maxime
+                officia fugiat ullam dolor tempore atque illum nulla beatae quis. Aperiam nobis nemo numquam alias
+                architecto atque excepturi, commodi porro eius quidem quos quam, dignissimos placeat perferendis
+                necessitatibus voluptas aut quo eos deleniti. Quae officia temporibus expedita iste error nihil
+                excepturi? Maiores iusto sint veritatis. Voluptatum, iusto tempore. Saepe atque, modi animi ullam
+                voluptates sint iste maxime ad aliquid ducimus. Tempora vero assumenda libero inventore accusamus.
+                Aliquam facere sunt itaque et asperiores fugit voluptatem ea. Rerum nobis enim ratione et quam quos
+                similique quae consequuntur? Libero ipsam esse dolore reiciendis odit placeat pariatur quos, rem
+                repellat eligendi mollitia atque quisquam facere iure odio, vitae animi, quod consectetur? Nulla, rem
+                dolor. Asperiores delectus quos doloremque aperiam et adipisci, aut corporis similique aliquam quisquam
+                pariatur, vitae reiciendis cum incidunt! Maiores eius aperiam et officia saepe amet eveniet!</p>
+        </section>
+        <aside class="bdr">
+            <h1>More about us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid voluptates veniam eaque voluptatum
+                officia id enim veritatis perferendis impedit nisi.</p>
+        </aside>
+    </div>
+
+    <footer class="bdr">
+        Copyright &copy; All right reserved
+    </footer>
 </body>
+
 </html>
