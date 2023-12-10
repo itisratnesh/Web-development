@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interaction using Alert, Confirm & Prompt</title>
 </head>
+
 <body>
     <div class="container">item-1</div>
     <div class="container">item-2</div>
@@ -18,7 +20,28 @@
     <div class="container">item-10</div>
 
     <script>
-        
+        // Alert in in-browser JavaScript - Does not return anything
+        alert("This is a messeage");
+
+        // Prompt in JavaScript:
+        let name = prompt("What is your name?", "Guest");
+        console.log(name);
+
+        // Confirm in JavaScript:
+        let deletePost = confirm("Do you really want to delete this post?");
+        console.log(deletePost);
+
+        if (deletePost) {
+            // Code to delete the post
+            console.log("Your post has been deleted successfully")
+        }
+        else {
+            // code to cancel deletion of the post
+            console.log("Your post has not been deleted")
+        }
+
+
     </script>
 </body>
+
 </html>
