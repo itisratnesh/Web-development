@@ -6,8 +6,36 @@
     <title>Manipulating the DOM</title>
 </head>
 <body>
-    <div class="container">
-        
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact Us</li>
+            <li>More About Us</li>
+        </ul>
     </div>
+    <div class="container">
+        This is another container
+    </div>
+
+    <script>
+        let main = document.getElementById('main');
+        console.log(main);
+
+        let nav = document.getElementById('nav');
+        console.log(nav);
+
+        let container = document.getElementsByClassName('container');
+        console.log(container);
+
+        let sel = document.querySelector('#nav>li');
+        console.log("Selector returns ", sel);
+
+        let sel = document.querySelectorAll('#nav>li');
+        console.log("Selector returns ", sel);
+
+
+    </script>
 </body>
 </html>
