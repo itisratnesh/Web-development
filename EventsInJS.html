@@ -6,9 +6,13 @@
     <title>JS Events</title>
     <style>
         #btn{
-            padding: 34px;
+            padding: 10px 14px;
             color: red;
             border: 2px solid black;
+            font-weight: bold;
+            background-color: aqua;
+            border-radius: 100px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -29,9 +33,32 @@
 
     <div class="container">
         <h1>This is my heading</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellat quaerat, optio esse ut consequatur inventore aut ipsum adipisci, numquam tenetur expedita harum. Molestiae quia obcaecati ea assumenda, cumque quibusdam error reiciendis ratione porro reprehenderit optio alias. Veniam, deleniti autem hic voluptates nam minus libero reprehenderit perspiciatis totam corporis fuga aliquid eaque! Vero doloribus reiciendis doloremque, velit et veniam delectus iste, in ullam adipisci, recusandae error sequi non est? Id tempora, deleniti omnis sed nihil odit sequi excepturi autem, temporibus reiciendis natus iste inventore dolore dignissimos dolorem delectus molestiae qui ipsam nostrum aperiam iure. Sit, voluptatum? Voluptatibus praesentium illum dolore iste sequi! Atque debitis, odio ratione obcaecati omnis odit molestias placeat! Ex alias recusandae ab modi, voluptatum voluptas! Dignissimos magnam accusamus eaque recusandae illo quo illum repellat accusantium mollitia, beatae itaque dicta soluta ab ullam expedita ea? Corrupti similique dolorem laudantium. Autem vero voluptate harum voluptas sunt recusandae pariatur, qui quisquam consequatur placeat alias vel ducimus est numquam, similique, officia fugiat libero ea? Est officiis modi laboriosam excepturi consequatur similique quos omnis harum dolor magnam optio libero numquam, quae, qui autem eaque, vitae nemo inventore! Repellat placeat tempore assumenda vitae numquam reiciendis voluptatem aperiam aspernatur odio sint, debitis illum deleniti quia facilis? Illo corporis at, quas dolorum iure consequatur. Molestiae suscipit magnam alias. Molestiae maiores doloribus consectetur id ducimus odio iste temporibus nemo reiciendis reprehenderit dolorem consequatur rem asperiores nobis, molestias ipsa optio?</p>
+        <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellat quaerat, optio esse ut consequatur inventore aut ipsum adipisci, numquam tenetur expedita harum. Molestiae quia obcaecati ea assumenda, cumque quibusdam error reiciendis ratione porro reprehenderit optio alias. Veniam, deleniti autem hic voluptates nam minus libero reprehenderit perspiciatis totam corporis fuga aliquid eaque! Vero doloribus reiciendis doloremque, velit et veniam delectus iste, in ullam adipisci, recusandae error sequi non est? Id tempora, deleniti omnis sed nihil odit sequi excepturi autem, temporibus reiciendis natus iste inventore dolore dignissimos dolorem delectus molestiae qui ipsam nostrum aperiam iure. Sit, voluptatum? Voluptatibus praesentium illum dolore iste sequi! Atque debitis, odio ratione obcaecati omnis odit molestias placeat! Ex alias recusandae ab modi, voluptatum voluptas! Dignissimos magnam accusamus eaque recusandae illo quo illum repellat accusantium mollitia, beatae itaque dicta soluta ab ullam expedita ea? Corrupti similique dolorem laudantium. Autem vero voluptate harum voluptas sunt recusandae pariatur, qui quisquam consequatur placeat alias vel ducimus est numquam, similique, officia fugiat libero ea? Est officiis modi laboriosam excepturi consequatur similique quos omnis harum dolor magnam optio libero numquam, quae, qui autem eaque, vitae nemo inventore! Repellat placeat tempore assumenda vitae numquam reiciendis voluptatem aperiam aspernatur odio sint, debitis illum deleniti quia facilis? Illo corporis at, quas dolorum iure consequatur. Molestiae suscipit magnam alias. Molestiae maiores doloribus consectetur id ducimus odio iste temporibus nemo reiciendis reprehenderit dolorem consequatur rem asperiores nobis, molestias ipsa optio?</p>
     </div>
-    <button id="btn">Show/Hide</button>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+
+    <script>
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover', function run(){
+            console.log('Mouse Inside')
+        });
+
+        para.addEventListener('mouseout', function run(){
+            console.log('Mouse now went Outside')
+        });
+
+
+        function toggleHide(){
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+            if(para.style.display != 'none'){
+                para.style.display = 'none';
+            }
+            else{
+                para.style.display = 'block';
+            }
+        }
+    </script>
 
 </body>
 </html>
