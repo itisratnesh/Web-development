@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>More on Salectors</title>
     <style>
-        h1 {
-            background-color: red;
-            color: black;
-            font-weight: bold;
-            text-align: center;
-        }
+      h1 {
+        background-color: red;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+      }
 
-        /* if p is contained by any li which is contained by div */
-        div li p {
-            font-weight: bold;
-            color: yellow;
-            background-color: green;
-        }
+      /* if p is contained by any li which is contained by div */
+      div li p {
+        font-weight: bold;
+        color: yellow;
+        background-color: green;
+      }
 
-        /* if p is right inside div then this will be applied */
-        div>p {
-            font-weight: bold;
-            color: yellow;
-            background-color: green;
-        }
+      /* if p is right inside div then this will be applied */
+      div > p {
+        font-weight: bold;
+        color: yellow;
+        background-color: green;
+      }
 
-        /* if p is right after div i.e. p is the next sibling of div */
-        div+p {
-            font-weight: bold;
-            color: yellow;
-            background-color: cyan;
-        }
+      /* if p is right after div i.e. p is the next sibling of div */
+      div + p {
+        font-weight: bold;
+        color: yellow;
+        background-color: cyan;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>This is more Salectors</h1>
     <div class="container">
-        <div class="row">
-            <p>This is a paragraph</p>
-            <p>This is another paragraph</p>
-            <ul>
-                <li class="item">
-                    <p>This is paragraph inside li (works on div li p) </p>
-                </li>
-                <li>This will not get affected</li>
-                <p>This is paragraph inside ul (works on div p) </p>
-            </ul>
-        </div>
-        <p>This is another paragraph inside both div (works on div+p) </p>
+      <div class="row">
+        <p>This is a paragraph</p>
+        <p>This is another paragraph</p>
+        <ul>
+          <li class="item">
+            <p>This is paragraph inside li (works on div li p)</p>
+          </li>
+          <li>This will not get affected</li>
+          <p>This is paragraph inside ul (works on div p)</p>
+        </ul>
+      </div>
+      <p>This is another paragraph inside both div (works on div+p)</p>
     </div>
-    <p>This is outermost paragraph (word on div+p) </p>
-</body>
-
+    <p>This is outermost paragraph (word on div+p)</p>
+  </body>
 </html>
